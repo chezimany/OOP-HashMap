@@ -1,0 +1,52 @@
+cheziunix
+
+
+
+=============================
+=      File description     =
+=============================
+SimpleHashSet - a class implementing a basic hash set.
+ClosedHashSet  - a class implementing a closed hash set.
+OpenHashSet - a class implementing an open hash set.
+CollectionFacadeSet - a class that wraps objects implementing
+java's collection.
+SimpleSetPerformanceAnalyzer - has a main method that measures the run-times
+of 5 different java data structures.
+
+=============================
+=          Design           =
+=============================
+
+
+
+=============================
+=  Implementation details   =
+=============================
+OpenHashSet - I defined a wrapper class of linked list named Bucket as suggested.
+
+deletion mechanism in ClosedHashSet - I created a bolean array that stays the same
+size of the table and if I delete an item I marek the same index in the boolean
+array as true.
+
+
+=============================
+=    Answers to questions   =
+=============================
+q - Account, in separate, for OpenHashSet’s and ClosedHashSet’s bad results for data1.txt
+a - the open hash set kept adding to the same index, hence to the end of the same
+linked list, which takes o(n). the closed hash set kept incresing the table which caused
+it to re-hash the elements every time it did so, which also takes o(n).
+
+q - Summarize the strengths and weaknesses of each of the data structures as reflected by
+    the results. Which would you use for which purposes?
+a - tree set and hash set had the best results in adding data.open hash set and hash set
+ had the best results in finding if they contain a certain element.
+ closed hash set had an average score in every test and the linked list scored the worst every time.
+
+q - How did your two implementations compare between themselves?
+a - the open hash set performed better overall
+
+q - How did your implementations compare to Java’s built in HashSet?
+a - java's hash set performed much better in adding the data, in the containing tests open hash set
+got pretty close and even got a better result when I checked if "hi" is contained when
+initialised with data1.txt
